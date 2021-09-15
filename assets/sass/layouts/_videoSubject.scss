@@ -1,0 +1,56 @@
+.videoSubject{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 32% 1fr;
+    column-gap: 80px;
+    margin-bottom: 60px;
+
+    &__info{
+        width: 100%;
+        height: 100%;
+        @include element-flex(column, stretch, flex-start);
+    }
+
+    &__title{
+        @include element-flex(row, stretch, center);
+        width: 100%;
+        column-gap: 40px;
+        &__text{
+            @include section-title;
+        }
+    }
+
+    &__subject{
+        width: 100%;
+        padding: 18px 21px;
+        border: 2px solid #000;
+        font-size: $font-xl;
+        font-weight: 700;
+        font-family: $font-cairo;
+        line-height: 30px;
+        letter-spacing: 5%;
+    }
+
+    &__description{
+        @include element-flex(column, center, flex-start);
+        flex-grow: 1;
+        padding: 10px 30px;
+        font-size: $font-xs;
+        border-left: dashed 2px #000;
+        margin: 20px 0;
+        text-align: justify;
+        text-indent: 3ch;
+    }
+
+    &__wrapper{
+        @include gradient-section;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        & > a{
+            grid-column: 1 / 4;
+            width: auto;
+            margin: 15px auto 30px;
+        }
+    }
+}

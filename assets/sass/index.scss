@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+@import 'base/index';
+
+//components
+@import './components/header';
+@import './components/footer';
+@import './components/button';
+@import './components/dropdown';
+@import './components/search';
+@import './components/video';
+@import './components/arrow';
+@import './components/minorComponents';
+@import './components/teamArticle';
+
+//layouts
+@import './layouts/subject';
+@import './layouts/seeAlso';
+@import './layouts/category';
+@import './layouts/highlighted';
+@import './layouts/columnWrapper';
+@import './layouts/videoSubject';
+@import './layouts/articleThumbnail';
+@import './layouts/arrowBorderHeader';
+@import './layouts/twoColumns';
+@import './layouts/arrowWrapper';
+
+.container{
+    @include element-flex(column, flex-start, flex-start);
+    @include constant-width;
+    width: 100%;
+    min-height: 100vh;
+    margin: 64px 0;
+}
+
+.title{
+    @include constant-width();
+    font-size: $font-xl;
+    margin: 36px 0 96px;
+
+    @include smDesktopWidth{
+        margin: 136px 0 69px;
+        padding: 0 20px;
+        font-size: 35px;
+    }
+}
+
+.content-wp{
+    @include constant-width;
+}
+
+.flex-grow{
+    flex-grow: 1;
+}
+
+.dashedBorder{
+    flex-grow: 1;
+    height: 0px;
+    border-top: 2px dashed #000;
+    margin-bottom: -2px;
+    display: block;
+    margin-left: 20px;
+}
+
+.videoPlaceholder{
+    animation: rotate 3s ease-out infinite;
+    transform-origin: center 91px;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(720deg);
+    }
+}

@@ -1,0 +1,27 @@
+.arrowBorderHeader{
+    @include element-flex(column, flex-start, flex-start);
+    width: 100%;
+    row-gap: 45px;
+
+    &__header{
+        @include element-flex(row, stretch, center);
+        width: 100%;
+        margin: 45px 0 0;
+    }
+
+    &__title{
+        @include section-title;
+        margin:  0 1ch 0 0;
+        max-width: 265px;
+        line-height: 27px;
+    }
+
+    &__dashedBorder{
+        flex-grow: 11;
+        height: 1px;
+        border-top: 2px dashed #000;
+        margin-bottom: -2px;
+        display: block;
+        margin-left: 1ch
+    }
+}

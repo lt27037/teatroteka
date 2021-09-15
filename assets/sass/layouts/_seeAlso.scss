@@ -1,0 +1,29 @@
+.seeAlso{
+    width: 100%;
+    padding: 45px 0;
+    &__header{
+        @include element-flex(row, stretch, center);
+        width: 100%;
+    }
+    &__title{
+        @include section-title;
+    }
+
+    &__wrapper{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 15% 1fr;
+        column-gap: 40px;
+        justify-items: start;
+        align-items: center;
+        padding: 15px 0 15px 30px;
+        margin: 15px 0;
+        border-left: 2px dashed #000;
+    }
+
+    &__box{
+        @include gradient-section;
+        @include element-flex(row, space-between, flex-start);
+        width: 100%;
+    }
+}

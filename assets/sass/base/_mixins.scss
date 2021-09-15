@@ -1,0 +1,86 @@
+@import 'vars';
+
+@mixin constant-width{
+	width: 100%;
+	padding: 0 calc(50vw - 680px);
+	@include desktopWidth(){
+		padding: 30px 20px;
+	}
+}
+
+@mixin gradient-section{
+	border-radius: 20px;
+	box-shadow: 0px 4px 120px #00000036;
+	background-image: $second-gradient;
+	padding: 15px 15px 5px;
+}
+
+@mixin section-title{
+	font-size: $font-xl;
+	font-weight: 700;
+	font-family: $font-cairo;
+	line-height: 40px;
+}
+
+@mixin element-flex($direction, $justify, $align) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+@mixin main-title{
+	font-size: $font-xl;
+	font-family: $font-ultra;
+}
+
+@mixin title-with-border{
+	@include element-flex(row, stretch, center);
+	column-gap: 20px;
+	font-size: $font-xl;
+	font-weight: 700;
+	font-family: $font-cairo;
+	line-height: 30px;
+	padding: 15px 25px;
+	border: 2px solid #000;
+}
+
+@mixin lgDesktopWidth {
+	@media screen and (max-width: $screen-d) {
+	  @content;
+	}
+}
+
+@mixin desktopWidth {
+	@media screen and (max-width: $screen-sd) {
+	  @content;
+	}
+}
+
+@mixin smDesktopWidth {
+	@media screen and (max-width: $screen-sm) {
+	  @content;
+	}
+}
+@mixin tabletWidth {
+	@media screen and (max-width: $screen-xsm) {
+	  @content;
+	}
+}
+@mixin phoneWidth {
+	@media screen and (max-width: $screen-phone) {
+	  @content;
+	}
+}
+@mixin smPhoneWidth {
+	@media screen and (max-width: $screen-smPhone) {
+	  @content;
+	}
+}
+
+$screen-d: 1400px;
+$screen-sd: 1400px;
+$screen-sm: 1240px;
+$screen-xsm: 1024px;
+$screen-phone: 768px;
+$screen-smPhone: 364px;

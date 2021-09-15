@@ -1,0 +1,37 @@
+.team{
+    @include gradient-section;
+    width: calc(100% - 280px);
+    margin: 40px 0 40px 280px;
+    padding: 48px 151px 68px 280px;
+    font-family: $font-cairo;
+    font-size: $font-l;
+    line-height: 24px;
+    position: relative;
+
+    &__name{
+        line-height: 24px;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        margin-right: 0.5ch;
+        font-weight: 700;
+        font-size: $font-l;
+    }
+
+    & > p{
+        font-family: $font-cairo;
+        font-size: $font-l;
+        line-height: 24px;
+    }
+
+    &__avatar{
+        width: 113px;
+        height: 113px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: absolute;
+        top: 68px;
+        left: 68px;
+    }
+
+}

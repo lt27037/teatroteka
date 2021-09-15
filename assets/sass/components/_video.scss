@@ -1,0 +1,76 @@
+.thumbnail{
+    @include element-flex(column, flex-start, flex-start);
+    width: 225px;
+    margin: 0 auto 30px auto;
+    row-gap: 5px;
+    z-index: 1;
+    &.video--biggest,
+    &.video--bigger{
+        width: 502px;
+    }
+
+    &.video--biggest{
+        .thumbnail__title{
+            @include section-title;
+            letter-spacing: 5%;
+            line-height: 30px;
+        }
+    }
+
+    &__header{
+        @include element-flex(row, stretch, center);
+        width: 100%;
+        column-gap: 7px;
+    }
+
+    &__dot{
+        width: 6px;
+        height: 6px;
+        background-color: #000;
+        border-radius: 50%;
+    }
+    
+    &__line{
+        height: 2px;
+        background-color: #000;
+        flex-grow: 1;
+    }
+
+    &__time,
+    &__group{
+        font-size: $font-xxs;
+        font-weight: 700;
+        font-family: $font-cairo;
+    }
+
+    &__author{
+        font-size: $font-xxs;
+        font-family: $font-cairo;
+        line-height: 12px;
+        margin-top: 3px;
+    }
+
+    &__title{
+        font-weight: 700;
+        font-family: $font-cairo;
+        line-height: 18px;
+        letter-spacing: 5%;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__titleWrapper{
+        @include element-flex(column, center, flex-start);
+        width: 100%;
+        height: calc(100% - 30px);
+        border-left: 2px dashed #000;
+        padding-left: 30px;
+        margin: 15px 0;
+    }
+
+    &__picture{
+        width: 225px;
+        height: 112px;
+        object-fit: cover;
+    }
+}

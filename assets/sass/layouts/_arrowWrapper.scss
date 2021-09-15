@@ -1,0 +1,32 @@
+.arrowWrapper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    column-gap: 45px;
+    margin: 45px 0;
+    &__info{
+        @include element-flex(row, stretch, center);
+        width: 100%;
+        height: 100%;
+        column-gap: 20px;
+    }
+
+    &__title{
+        @include section-title;
+    }
+
+    &__wrapper{
+        @include gradient-section;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__column{
+        width: 100%;
+        @include element-flex(column, flex-start, flex-start);
+    }
+
+    &__spaceBetween{
+        @include element-flex(row, space-between, flex-start);
+    }
+}

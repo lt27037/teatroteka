@@ -1,0 +1,17 @@
+.twoColumns{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    &__right{
+        @include element-flex(column, flex-start, stretch);
+        grid-column: 2;
+        grid-row: 1;
+        padding-right: 150px;
+    }
+    &__left{
+        @include element-flex(column, flex-start, stretch);
+        grid-column: 1;
+        grid-row: 1;
+        padding-right: 130px;
+    }
+}

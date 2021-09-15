@@ -1,0 +1,15 @@
+.columnWrapper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 40px;
+    row-gap: 30px;
+    margin-bottom: 30px;
+
+    &.firstBig{
+        div:first-child{
+            grid-column: 1 / 3;
+            grid-row: 1;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.highlighted{
+    @include gradient-section;
+    background-image: $main-gradient;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 49px;
+    row-gap: 35px;
+    margin-bottom: 90px;
+
+    .video:first-child{
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+    }
+}

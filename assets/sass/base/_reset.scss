@@ -1,0 +1,15 @@
+@import 'vars';
+@import 'colors';
+
+*{
+	box-sizing: border-box;
+	font-family: $font-lato;
+	font-size: 16px;
+	font-weight: 400;
+	color: $font-dark;
+}
+
+body{
+	background-image: $main-gradient;
+	margin: 0;
+}

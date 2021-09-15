@@ -1,0 +1,87 @@
+
+.borderTitle{
+    @include title-with-border;
+    padding-right: 40px;
+    width: 100%;
+    max-width: 530px;
+    min-height: 90px;
+    &.marginBottom{
+        margin-bottom: 50px
+    }
+}
+
+.textWithBorder{
+    @include element-flex(column, flex-start, flex-start);
+    padding: 30px 30px;
+    font-size: $font-xs;
+    border-left: dashed 2px #000;
+    margin: 20px 0;
+    text-align: justify;
+    font-family: $font-lato;
+    & > p{
+        font-size: $font-l;
+    }
+
+    & > h3{
+        font-size: $font-l;
+        margin: 40px 0 5px;
+        font-weight: 700;
+    }
+}
+
+.textWithAvatar{
+    @include element-flex(column, flex-start, flex-start);
+    padding-left: 110px;
+    font-family: $font-lato;
+    position: relative;
+    margin-bottom: 40px;
+
+    &__title,
+    &__text{
+        font-size: $font-l;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__title{
+        font-weight: 700;
+    }
+
+    &__picture{
+        position: absolute;
+        width: 74px;
+        height: 74px;
+        overflow: hidden;
+        border-radius: 50%;
+        object-fit: cover;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+
+.videoInfo{
+    @include element-flex(column, flex-start, flex-start);
+    &__header{
+        @include element-flex(row, stretch, center);
+        column-gap: 30px;
+        width: 100%
+    }
+    &__title{
+        @include section-title;
+        margin: 0;
+        padding: 0;
+        max-width: 180px;
+    }
+}
+
+.wrapperWithMargin{
+    @include element-flex(column, flex-start, flex-start);
+    margin: 60px 0 60px 280px;
+    & > a,
+    & > p{
+        font-size: $font-l;
+        font-family: $font-cairo;
+        line-height: 24px;
+    }
+}
