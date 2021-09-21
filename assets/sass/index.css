@@ -578,7 +578,7 @@ body {
   font-weight: 700;
   font-family: "Cairo", sans-serif;
   line-height: 40px;
-  letter-spacing: 5%;
+  letter-spacing: 0.05em;
   line-height: 30px;
 }
 
@@ -633,7 +633,7 @@ body {
   font-weight: 700;
   font-family: "Cairo", sans-serif;
   line-height: 18px;
-  letter-spacing: 5%;
+  letter-spacing: 0.05em;
   margin: 0;
   padding: 0;
 }
@@ -703,6 +703,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  min-width: 80px;
 }
 
 .arrow__left > img {
@@ -895,6 +896,43 @@ body {
   line-height: 24px;
 }
 
+.labelWithImage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  -webkit-column-gap: 28px;
+          column-gap: 28px;
+  padding: 10px 0 10px 46px;
+}
+
+.labelWithImage__img {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+}
+
+.labelWithImage__label {
+  font-size: 18px;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
+
+.labelWithImage__label:hover {
+  text-decoration: underline;
+}
+
 .team {
   border-radius: 20px;
   -webkit-box-shadow: 0px 4px 120px #00000036;
@@ -908,6 +946,11 @@ body {
   font-size: 18px;
   line-height: 24px;
   position: relative;
+}
+
+.team.noMargin {
+  margin: 0;
+  width: 100%;
 }
 
 .team__name {
@@ -934,6 +977,286 @@ body {
   position: absolute;
   top: 68px;
   left: 68px;
+}
+
+.konspektTop, .konspektInfo {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 130px;
+          column-gap: 130px;
+  margin: 16px 0;
+  position: relative;
+  padding: 45px 0;
+}
+
+.konspektTop__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.konspektTop__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  padding-right: 20%;
+}
+
+.konspektTop__box__label {
+  font-family: "Cairo", sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  line-height: 19px;
+}
+
+.konspektTop__box__title {
+  font-family: "Cairo", sans-serif;
+  font-size: 23px;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  font-weight: 900;
+  margin: 0 0 20px;
+}
+
+.konspektTop__box__text {
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  line-height: 17px;
+  margin: 0;
+}
+
+.konspektTop::after, .konspektInfo::after {
+  content: '';
+  width: 0;
+  height: calc(100% - 90px);
+  border-left: 1px dashed #000;
+  border-right: 1px dashed #000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.konspektInfo {
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 4px 120px #00000036;
+          box-shadow: 0px 4px 120px #00000036;
+  background-image: linear-gradient(178.81deg, rgba(255, 199, 0, 0.27) 0.89%, rgba(196, 196, 196, 0) 49.96%);
+  padding: 15px 15px 5px;
+  padding: 45px 20px;
+  margin-bottom: 100px;
+}
+
+.konspektInfo__value, .konspektInfo__title {
+  font-size: 12px;
+  font-family: "Cairo", sans-serif;
+  line-height: 20px;
+}
+
+.konspektInfo__title {
+  font-weight: 700;
+  margin: 0;
+}
+
+.konspektInfo__title::after {
+  content: ':';
+}
+
+.konspektInfo__wrapper {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.konspektInfo__wrapper__title {
+  font-size: 23px;
+  font-family: "Cairo", sans-serif;
+  font-weight: 700;
+  margin: 0 0 20px;
+}
+
+.konspektInfo__wrapper__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.konspektInfo__wrapper .button {
+  margin: 0 auto;
+}
+
+.konspektInfo__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  margin-bottom: 38px;
+}
+
+.konspektInfo__row:first-of-type {
+  border-top: 2px solid #000;
+}
+
+.konspektInfo__row {
+  border-bottom: 2px solid #000;
+  width: 100%;
+  padding: 13px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 1fr;
+      grid-template-columns: 20% 1fr;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.konspektInfo__row.row--half {
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.konspektInfo__row__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 1ch;
+          column-gap: 1ch;
+}
+
+.konspektColumn {
+  margin-left: 300px;
+  min-height: 265px;
+}
+
+.konspektColumn > p {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.05em;
+  font-family: "Lato", sans-serif;
+}
+
+.konspektTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  font-size: 23px;
+  font-weight: 700;
+  font-family: "Cairo", sans-serif;
+  line-height: 30px;
+  padding: 15px 25px;
+  border: 2px solid #000;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 110px;
+      grid-template-columns: 1fr 110px;
+  padding: 0;
+  max-width: 550px;
+  margin: 84px 0 23px;
+}
+
+.konspektTitle__title {
+  padding: 30px 20px;
+  font-size: 23px;
+  line-height: 30px;
+  font-weight: 30px;
+  letter-spacing: 0.05em;
+  font-family: "Cairo", sans-serif;
+  font-weight: 900;
+}
+
+.konspektTitle__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-left: 2px solid #000;
+  height: 100%;
+  font-size: 23px;
 }
 
 .subject {
@@ -1008,7 +1331,7 @@ body {
   font-weight: 700;
   font-family: "Cairo", sans-serif;
   line-height: 30px;
-  letter-spacing: 5%;
+  letter-spacing: 0.05em;
 }
 
 .subject__description {
@@ -1295,7 +1618,7 @@ body {
   font-weight: 700;
   font-family: "Cairo", sans-serif;
   line-height: 30px;
-  letter-spacing: 5%;
+  letter-spacing: 0.05em;
 }
 
 .videoSubject__description {
@@ -1541,6 +1864,10 @@ body {
   row-gap: 45px;
 }
 
+.arrowBorderHeader.bottomBorder {
+  border-bottom: 2px dashed #000;
+}
+
 .arrowBorderHeader__header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1634,8 +1961,8 @@ body {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 200px 1fr;
-      grid-template-columns: 200px 1fr;
+  -ms-grid-columns: 240px 1fr;
+      grid-template-columns: 240px 1fr;
   -webkit-column-gap: 45px;
           column-gap: 45px;
   margin: 45px 0;
@@ -1657,8 +1984,8 @@ body {
           align-items: center;
   width: 100%;
   height: 100%;
-  -webkit-column-gap: 20px;
-          column-gap: 20px;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
 }
 
 .arrowWrapper__title {
@@ -1666,6 +1993,8 @@ body {
   font-weight: 700;
   font-family: "Cairo", sans-serif;
   line-height: 40px;
+  max-width: 150px;
+  word-break: break-word;
 }
 
 .arrowWrapper__wrapper {
@@ -1679,7 +2008,6 @@ body {
 }
 
 .arrowWrapper__column {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1687,12 +2015,14 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  width: 100%;
+  min-height: 265px;
 }
 
 .arrowWrapper__spaceBetween {

@@ -8,6 +8,11 @@
     line-height: 24px;
     position: relative;
 
+    &.noMargin{
+        margin: 0;
+        width: 100%;
+    }
+
     &__name{
         line-height: 24px;
         display: inline-block;

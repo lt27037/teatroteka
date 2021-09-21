@@ -8,6 +8,7 @@
     &__left{
         @include element-flex(row, stretch, center);
         flex-grow: 1;
+        min-width: 80px;
         & > img{
             width: 12px;
             height: 12px;

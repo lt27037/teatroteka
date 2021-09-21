@@ -12,7 +12,7 @@
     &.video--biggest{
         .thumbnail__title{
             @include section-title;
-            letter-spacing: 5%;
+            letter-spacing: 0.05em;
             line-height: 30px;
         }
     }
@@ -54,7 +54,7 @@
         font-weight: 700;
         font-family: $font-cairo;
         line-height: 18px;
-        letter-spacing: 5%;
+        letter-spacing: 0.05em;
         margin: 0;
         padding: 0;
     }

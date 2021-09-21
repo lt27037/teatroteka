@@ -25,12 +25,12 @@
                 <?php include 'components/arrow-down.php' ?>
             </div>
             <div class="subject__wrapper">
-                <?php include 'components/video.php' ?>
-                <?php include 'components/video.php' ?>
-                <?php include 'components/video.php' ?>
-                <?php include 'components/video.php' ?>
-                <?php include 'components/video.php' ?>
-                <?php include 'components/video.php' ?>
+                <?php include 'components/thumbnail.php' ?>
+                <?php include 'components/thumbnail.php' ?>
+                <?php include 'components/thumbnail.php' ?>
+                <?php include 'components/thumbnail.php' ?>
+                <?php include 'components/thumbnail.php' ?>
+                <?php include 'components/thumbnail.php' ?>
             </div>
         </section>
         <section class="seeAlso">

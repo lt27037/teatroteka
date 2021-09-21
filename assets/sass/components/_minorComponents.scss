@@ -85,3 +85,27 @@
         line-height: 24px;
     }
 }
+
+.labelWithImage{
+    @include element-flex(row, flex-start, flex-start);
+    width: 100%;
+    column-gap: 28px;
+    padding: 10px 0 10px 46px;
+
+    &__img{
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+    }
+
+    &__label{
+        font-size: $font-l;
+        font-family: $font-lato;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

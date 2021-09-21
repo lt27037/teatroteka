@@ -2,7 +2,6 @@
     <header class="thumbnail__header">
         <div class="thumbnail__dot"></div>
         <span class="thumbnail__group">1-3 kl.</span>
-        <span class="thumbnail__time">15 minut</span>
         <div class="thumbnail__line"></div>
     </header>
     <img src="assets/img/article-thumbnail.png" alt="miniaturka" class="thumbnail__picture">

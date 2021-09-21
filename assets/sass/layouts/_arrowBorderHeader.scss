@@ -3,6 +3,10 @@
     width: 100%;
     row-gap: 45px;
 
+    &.bottomBorder{
+        border-bottom: 2px dashed #000
+    }
+
     &__header{
         @include element-flex(row, stretch, center);
         width: 100%;

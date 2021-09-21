@@ -1,0 +1,164 @@
+.konspektTop{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 130px;
+    margin: 16px 0;
+    position: relative;
+    padding: 45px 0;
+
+    &__image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__box{
+        @include element-flex(column, center, flex-start);
+        width: 100%;
+        height: 100%;
+        padding-right: 20%;
+        &__label{
+            font-family: $font-cairo;
+            font-size: $font-xxs;
+            letter-spacing: 0.05em;
+            line-height: 19px;
+        }
+        &__title{
+            font-family: $font-cairo;
+            font-size: $font-xl;
+            line-height: 30px;
+            letter-spacing: 0.05em;
+            font-weight: 900;
+            margin: 0 0 20px;
+        }
+        &__text{
+            font-family: $font-lato;
+            font-size: $font-xs;
+            letter-spacing: 0.05em;
+            line-height: 17px;
+            margin: 0;
+        }
+    }
+
+    &::after{
+        content: '';
+        width: 0;
+        height: calc(100% - 90px);
+        border-left: 1px dashed #000;
+        border-right: 1px dashed #000;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.konspektInfo{
+    @extend .konspektTop;
+    @include gradient-section;
+    padding: 45px 20px;
+    margin-bottom: 100px;
+    &__value,
+    &__title{
+        font-size: $font-xs;
+        font-family: $font-cairo;
+        line-height: 20px;
+    }
+
+    &__title{
+        font-weight: 700;
+        margin: 0;
+        &::after{
+            content: ':';
+        }
+    }
+    &__wrapper{
+        width: 100%;
+        height: 100%;
+        @include element-flex(column, flex-start, flex-start);
+
+        &__title{
+            font-size: $font-xl;
+            font-family: $font-cairo;
+            font-weight: 700;
+            margin: 0 0 20px;
+        }
+
+        &__row{
+            @include element-flex(column, flex-start, flex-start);
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+        .button{
+            margin: 0 auto;
+        }
+    }
+
+    &__container{
+        @include element-flex(column, flex-start, flex-start);
+        width: 100%;
+        margin-bottom: 38px;
+    }
+
+    &__row:first-of-type{
+        border-top: 2px solid #000;
+    }
+
+    &__row{
+        border-bottom: 2px solid #000;
+        width: 100%;
+        padding: 13px;
+        display: grid;
+        grid-template-columns: 20% 1fr;
+        column-gap: 20px;
+        align-items: center;
+
+        &.row--half{
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &__wrapper{
+            @include element-flex(row, flex-start, center);
+            column-gap: 1ch;
+        }
+    }
+}
+
+.konspektColumn{
+    margin-left: 300px;
+    min-height: 265px;
+
+    & > p{
+        font-size: $font-m;
+        line-height: 26px;
+        letter-spacing: 0.05em;
+        font-family: $font-lato;
+    }
+}
+
+.konspektTitle{
+    @include title-with-border;
+    display: grid;
+    grid-template-columns: 1fr 110px;
+    padding: 0;
+    max-width: 550px;
+    margin: 84px 0 23px;
+
+    &__title{
+        padding: 30px 20px;
+        font-size: $font-xl;
+        line-height: 30px;
+        font-weight: 30px;
+        letter-spacing: 0.05em;
+        font-family: $font-cairo;
+        font-weight: 900;
+    }
+    &__info{
+        @include element-flex(row, center, center);
+        border-left: 2px solid #000;
+        height: 100%;
+        font-size: $font-xl;
+    }
+}
