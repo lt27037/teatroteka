@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/sass/index.css">
 </head>
 <body>
-    <?php @include 'components/header.php' ?>
+    <?php @include 'components/header-sorting.php' ?>
     <div class="container">
         <div class="konspektTop">
             <img src="assets/img/article-thumbnail.png" alt="Miniatura konspektu" class="konspektTop__image">
