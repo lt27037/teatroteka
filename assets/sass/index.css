@@ -1359,6 +1359,15 @@ body {
   z-index: 102;
 }
 
+.sort__close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
 .sort__button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1385,10 +1394,11 @@ body {
   transition: background .2s;
   z-index: 102;
   position: relative;
+  background: transparent;
 }
 
-.sort:hover {
-  background-color: #ECE8E5;
+.sort__button:hover {
+  background: #ECE8E5;
 }
 
 .sort__icon {
@@ -1400,8 +1410,7 @@ body {
 }
 
 .sort__options {
-  display: -ms-grid;
-  display: grid;
+  display: none;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   border-radius: 0px 15px 15px 15px;
@@ -1421,6 +1430,7 @@ body {
 }
 
 .sort__options .button {
+  width: 130px;
   position: absolute;
   bottom: 15px;
   left: 50%;
@@ -1441,6 +1451,36 @@ body {
   left: 0;
   top: 4px;
   margin: 0;
+}
+
+.sort.single .sort__options {
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  width: 185px;
+}
+
+.sort.triple .sort__options {
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  width: 490px;
+}
+
+.sort.active {
+  z-index: 200;
+}
+
+.sort.active .sort__options {
+  display: -ms-grid;
+  display: grid;
+}
+
+.sort.active .sort__icon {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.sort.active .sort__button {
+  background: #ECE8E5;
 }
 
 .subject {

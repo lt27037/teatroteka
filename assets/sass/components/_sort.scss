@@ -5,6 +5,15 @@
     border-radius: 999px;
     z-index: 102;
 
+    &__close{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+    }
+
     &__button{
         @include element-flex(row, center, center);
         min-width: 125px;
@@ -18,10 +27,11 @@
         transition: background .2s;
         z-index: 102;
         position: relative;
-    }
+        background: transparent;
 
-    &:hover{
-        background-color: #ECE8E5;
+        &:hover{
+            background: #ECE8E5;
+        }
     }
 
     &__icon{
@@ -32,7 +42,7 @@
     }
 
     &__options{
-        display: grid;
+        display: none;
         grid-template-columns: repeat(2, 1fr);
         border-radius: 0px 15px 15px 15px;
         row-gap: 10px;
@@ -48,6 +58,7 @@
         width: 315px;
 
         .button{
+            width: 130px;
             position: absolute;
             bottom: 15px;
             left: 50%;
@@ -67,6 +78,32 @@
             left: 0;
             top: 4px;
             margin: 0;
+        }
+    }
+
+    &.single .sort__options{
+        grid-template-columns: 100%;
+        width: 185px;
+    } 
+
+    &.triple .sort__options{
+        grid-template-columns: repeat(3, 1fr);
+        width: 490px;
+    } 
+
+    &.active{
+        z-index: 200;
+        
+        .sort__options{
+            display: grid;
+        }
+
+        .sort__icon{
+            transform: rotate(270deg);
+        }
+
+        .sort__button{
+            background: #ECE8E5;
         }
     }
 }

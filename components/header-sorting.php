@@ -74,7 +74,8 @@
             sortuj:
         </div>
         <?php include 'components/sort-dropdown.php' ?>
-        <?php include 'components/sort-dropdown.php' ?>
+        <?php include 'components/sort-dropdown-single.php' ?>
+        <?php include 'components/sort-dropdown-triple.php' ?>
         <button class="button">Sortuj</button>
         <button class="header__sort__delete">
             <img src="assets/img/delete.svg" alt="ikona usuń" class="header__sort__delete__icon">
