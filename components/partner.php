@@ -1,0 +1,4 @@
+<articel class="partner">
+    <img src="assets/img/article-thumbnail.png" alt="awatar" class="partner__avatar">
+    <p class="partner__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum facilis ducimus beatae magni esse molestiae unde aliquam ipsam iusto minus vel provident, aut quis natus doloremque in quam illo. Harum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel facere quis explicabo beatae necessitatibus voluptatem tempore repellendus quo autem repellat libero repudiandae consectetur perferendis labore recusandae, laboriosam eius natus accusantium!</p>
+</articel>

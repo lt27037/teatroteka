@@ -19,14 +19,14 @@
             </li>
             <nav class="dropdown header__list__button__dropdown">
                 <ul class="dropdown__list">
-                    <a href="/" class="dropdown__list__link" tabindex="1">
+                    <a href="/partnerzy-program.php" class="dropdown__list__link" tabindex="1">
                         <li class="dropdown__list__item">Program</li>
                     </a>
-                    <a href="/dzieje-sie.php" class="dropdown__list__link" tabindex="1">
-                        <li class="dropdown__list__item">Co się dzieje?</li>
+                    <a href="/partnerzy-zglossie.php" class="dropdown__list__link" tabindex="1">
+                        <li class="dropdown__list__item">Zgłoś się</li>
                     </a>
-                    <a href="/" class="dropdown__list__link" tabindex="1">
-                        <li class="dropdown__list__item">Archiwum</li>
+                    <a href="/partnerzy-edycja.php" class="dropdown__list__link" tabindex="1">
+                        <li class="dropdown__list__item">Edycja 2021/2022</li>
                     </a>
                 </ul>
             </nav>

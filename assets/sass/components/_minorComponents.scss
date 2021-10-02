@@ -1,4 +1,3 @@
-
 .borderTitle{
     @include title-with-border;
     padding-right: 40px;
@@ -7,6 +6,10 @@
     min-height: 90px;
     &.marginBottom{
         margin-bottom: 50px
+    }
+
+    &.fullWidth{
+        max-width: unset;
     }
 }
 
