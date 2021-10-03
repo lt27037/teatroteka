@@ -23,7 +23,10 @@
         <div class="footer__wrapperTop__subjects">
             <div class="footer__wrapperTop__subjects__left">
                 <span class="footer__wrapperTop__subjects__title">Tematy</span>
-                <img src="assets/img/arrow.svg" alt="arrow" class="footer__wrapperTop__subjects__title">
+                <img src="assets/img/arrow.svg" alt="arrow" class="footer__wrapperTop__subjects__img">
+                <div class="footer__wrapperTop__subjects__arrow">
+                    <?php include 'components/arrow-left.php' ?>
+                </div>
             </div>
             <div class="footer__wrapperTop__subjects__right">
                 <button class="button ghost">Integracja grupy</button>
