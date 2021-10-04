@@ -1,6 +1,7 @@
 .seeAlso{
     width: 100%;
     padding: 45px 0;
+
     &__header{
         @include element-flex(row, stretch, center);
         width: 100%;
@@ -19,11 +20,19 @@
         padding: 15px 0 15px 30px;
         margin: 15px 0;
         border-left: 2px dashed #000;
+
+        @include phoneWidth{
+            @include element-flex(column, flex-start, flex-start);
+        }
     }
 
     &__box{
         @include gradient-section;
         @include element-flex(row, space-between, flex-start);
         width: 100%;
+
+        @include phoneWidth{
+            @include element-flex(column, flex-start, flex-start);
+        }
     }
 }

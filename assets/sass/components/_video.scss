@@ -7,6 +7,11 @@
     &.video--biggest,
     &.video--bigger{
         width: 502px;
+
+        @include phoneWidth{
+            width: auto;
+            max-width: 100%;
+        }
     }
 
     &.video--biggest{

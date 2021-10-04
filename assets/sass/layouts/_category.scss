@@ -4,6 +4,17 @@
     grid-template-columns: 15% 1fr;
     column-gap: 55px;
     margin: 35px 0;
+
+    &__info{
+        @include phoneWidth{
+            width: 100%;
+        }
+    }
+
+    @include phoneWidth{
+        @include element-flex(column, flex-start, flex-start);
+    }
+
     &__header{
         width: 100%;
         @include element-flex(row, stretch, center);
@@ -25,5 +36,10 @@
     &__wrapper{
         @include element-flex(row, space-between, flex-start);
         @include gradient-section;
+
+        @include phoneWidth{
+            @include element-flex(column, flex-start, flex-start);
+            max-width: 100%;
+        }
     }
 }

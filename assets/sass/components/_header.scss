@@ -26,6 +26,20 @@
         border: 2px solid #000;
         border-left: none;
         border-right: none;
+
+        @include phoneWidth{
+            justify-content: center;
+            margin-top: 0;
+
+            &__button:first-child,
+            &__button:nth-last-child(1),
+            &__button:nth-last-child(2){
+                display: none;
+            }
+            &__button:nth-child(2){
+                border-left: 2px solid #000;
+            }
+        }
         
 
         &__button:first-child{
@@ -47,6 +61,10 @@
 
             @include smDesktopWidth{
                 padding: 0 20px;
+            }
+
+            @include phoneWidth{
+                padding: 0 15px;
             }
 
             &::after{
@@ -113,5 +131,27 @@
             }
         }
 
+    }
+
+    &__mobile{
+        display: none;
+
+        @include phoneWidth{
+            @include element-flex(row, flex-end, center);
+            width: 100%;
+            padding: 0 17px;
+            border-top: 2px solid #000;
+            margin-top: 18px;
+        }
+
+        &__logo{
+            width: 133px;
+            object-fit: contain;
+            margin-right: auto;
+        }
+
+        & > .header__list__button{
+            border: none;
+        }
     }
 }
